@@ -54,8 +54,6 @@ body {
 .ludo-square.blue { background-color: #3498db; }
 
 #tic-tac-toe-board {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -150,13 +148,35 @@ body {
     transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+    .cell {
+        width: 12vw;
+    }
+}
+
 @media (max-width: 480px) {
-    :root {
-        --cell-size: 80px;
+    .cell {
+        width: 20vw; 
     }
 
-    .ludo-square {
-        font-size: 1rem;
+    body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 376px) {
+    .cell {
+        width: 22vw; 
+    }
+}
+
+@media (max-width: 321px) {
+    .cell {
+        width: 28vw; 
+    }
+
+    body {
+        padding: 10px;
     }
 }
 
